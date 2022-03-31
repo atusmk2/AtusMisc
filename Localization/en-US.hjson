@@ -1,0 +1,35 @@
+Mods: {
+    AtusMisc: {
+        Currencies: {
+            FoodMoney: Food Coupon
+        }
+
+		ItemName: {
+			kajitsu: Fruit Drop
+			kusuri:	Potion Drop
+			randomVan: Random Vanilla Gacha
+		}
+
+        NPCName: {
+            SnackVendor: Snack Vendor Lady
+        }
+
+        TownNPCMood: {
+			SnackVendor: {
+				Content: I feel pretty fine right now.
+				NoHome: Hmm, all these monsters are annoying, I wish I had place to stay.
+				LoveSpace: What a fine place to sell my wares, Welcome!
+				FarFromHome: Could you please get me back to my store?
+				DislikeCrowded: There are too many people around, I'm not too fond with this.
+				LikeBiome: "{BiomeName} is a quite nice place, can feel the energy."
+				LoveBiome: "I really love {BiomeName}, there's less scary monsters here."
+				DislikeBiome: "It's way too hot in {BiomeName}, I'm drenched in sweat!"
+				HateBiome: "Its kind of hard to do commerce while being attacked by monsters in {BiomeName}."
+				LikeNPC: "I can respect {NPCName} as a colleague and educator!"
+				LoveNPC: "Do you think {NPCName} notices me, isn't he?"
+				DislikeNPC: '''"{NPCName} keeps rambling on about "payed mods"... Wish I could convince him how terrible of an idea that is."'''
+				HateNPC: "I hate all the loud noises caused by {NPCName} and his explosives! I just want peace and quiet."
+			}
+		}
+    }
+}
