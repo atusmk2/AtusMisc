@@ -1,1 +1,1 @@
-Atus' random ideas and implementation.
+Random ideas and implementation. Mostly copy pasted from example mod.

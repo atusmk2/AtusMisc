@@ -21,7 +21,7 @@ namespace AtusMisc.Items.Drop
 			Item.rare = 2;
 		}
 		public override void PostUpdate() {
-			Lighting.AddLight(Item.Center, Color.WhiteSmoke.ToVector3() * 0.5f * Main.essScale);
+			Lighting.AddLight(Item.Center, Color.WhiteSmoke.ToVector3() * 0.7f * Main.essScale);
 		}
     }
 }

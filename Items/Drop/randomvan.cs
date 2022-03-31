@@ -37,8 +37,5 @@ namespace AtusMisc.Items.Drop
             resultType = amogus;
 			resultStack = 1;
 		}
-        // public override Color? GetAlpha(Color lightColor) {
-        //     return new Color(50,50,50,0);
-        // }
     }
 }

@@ -12,7 +12,6 @@ namespace AtusMisc.Items.Drop
 	public class kajitsu : ModItem
 	{
 		public override void SetStaticDefaults() {
-			// DisplayName.SetDefault("Fruit Essences");
 			Tooltip.SetDefault("Throw into Extractinator to get fruits.");
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 4));
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;
