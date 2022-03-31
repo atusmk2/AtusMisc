@@ -18,7 +18,6 @@ namespace AtusMisc.Items.Drop
 		private static List<short> exploPot = new List<short> { ItemID.NightOwlPotion, ItemID.ShinePotion, ItemID.MiningPotion, ItemID.GillsPotion, ItemID.WaterWalkingPotion, ItemID.FeatherfallPotion, ItemID.WarmthPotion, ItemID.ObsidianSkinPotion, ItemID.TrapsightPotion, ItemID.FlipperPotion, ItemID.GravitationPotion, ItemID.SpelunkerPotion, ItemID.PotionOfReturn, ItemID.RecallPotion };
 		private static List<short> luckPot =  new List<short> { ItemID.LuckPotionLesser, ItemID.LuckPotion, ItemID.LuckPotionGreater};
         public override void SetStaticDefaults() {
-			// DisplayName.SetDefault("Potion Essences");
 			Tooltip.SetDefault("Throw into Extractinator to get potions.");
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5,4));
             ItemID.Sets.AnimatesAsSoul[Item.type] = true;
@@ -70,10 +69,5 @@ namespace AtusMisc.Items.Drop
 			resultStack = 1;
 			}
 		}
-        /* public override void AddRecipes() {
-			CreateRecipe(999)
-				.AddIngredient(ItemID.CopperCoin, 1)
-				.Register();
-		} */
     }
 }

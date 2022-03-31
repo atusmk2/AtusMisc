@@ -3,7 +3,6 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace AtusMisc.Items.Drop
 {
@@ -16,16 +15,13 @@ namespace AtusMisc.Items.Drop
 
         }
        public override void SetDefaults() {
-			Item.width = 18; // 46
-			Item.height = 26; // 22
+			Item.width = 18;
+			Item.height = 26;
 			Item.maxStack = 1000;
 			Item.rare = 2;
 		}
 		public override void PostUpdate() {
-			Lighting.AddLight(Item.Center, Color.WhiteSmoke.ToVector3() * 0.5f * Main.essScale);
+			Lighting.AddLight(Item.Center, Color.WhiteSmoke.ToVector3() * 0.7f * Main.essScale);
 		}
-        /* public override Color? GetAlpha(Color lightColor) {
-            return new Color(255,255,255,0);
-        } */
     }
 }

@@ -2,15 +2,12 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Linq;
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria.GameContent;
 using Terraria.GameContent.Personalities;
 using Terraria.DataStructures;
 using AtusMisc.Items.Drop;
@@ -262,7 +259,7 @@ namespace AtusMisc.NPCs {
         }
         public override void DrawTownAttackGun(ref float scale, ref int item, ref int closeness)
         {
-            scale = 0.7f;
+            scale = 0.8f;
             closeness = 5;
             item = ItemID.LaserMachinegun;
         }
