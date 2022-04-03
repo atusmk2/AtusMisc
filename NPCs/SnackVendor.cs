@@ -66,13 +66,13 @@ namespace AtusMisc.NPCs {
                 new FlavorTextBestiaryInfoElement("This lovely lady sells snack and food rarely dropped from enemy.\nShe only accept \"food coupon\" as payment method though.")
             });
         }
-        public override void HitEffect(IEntitySource hitSource, int hitDirection, double damage) {
-			int num = NPC.life > 0 ? 1 : 5;
+        // public override void HitEffect(IEntitySource hitSource, int hitDirection, double damage) {
+		// 	int num = NPC.life > 0 ? 1 : 5;
 
-			for (int k = 0; k < num; k++) {
-				Dust.NewDust(hitSource, NPC.position, NPC.width, NPC.height, DustID.Blood);
-			}
-		}
+		// 	for (int k = 0; k < num; k++) {
+		// 		Dust.NewDust(hitSource, NPC.position, NPC.width, NPC.height, DustID.Blood);
+		// 	}
+		// }
         public override bool CanTownNPCSpawn(int numTownNPCs, int money) {
 			Player player = Main.LocalPlayer;
             if (player.inventory.Any(item => item.type == ModContent.ItemType<FoodCoupon>())){
