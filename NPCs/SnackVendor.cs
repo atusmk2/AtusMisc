@@ -2,14 +2,19 @@ using Microsoft.Xna.Framework;
 using System;
 using System.Linq;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
+using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
 using Terraria.GameContent.Personalities;
 using Terraria.DataStructures;
+using System.Collections.Generic;
+using ReLogic.Content;
 using AtusMisc.Items.Drop;
 
 namespace AtusMisc.NPCs {
@@ -66,13 +71,13 @@ namespace AtusMisc.NPCs {
                 new FlavorTextBestiaryInfoElement("This lovely lady sells snack and food rarely dropped from enemy.\nShe only accept \"food coupon\" as payment method though.")
             });
         }
-        // public override void HitEffect(IEntitySource hitSource, int hitDirection, double damage) {
-		// 	int num = NPC.life > 0 ? 1 : 5;
+        public override void HitEffect(int hitDirection, double damage) {
+			int num = NPC.life > 0 ? 1 : 5;
 
-		// 	for (int k = 0; k < num; k++) {
-		// 		Dust.NewDust(hitSource, NPC.position, NPC.width, NPC.height, DustID.Blood);
-		// 	}
-		// }
+			for (int k = 0; k < num; k++) {
+				Dust.NewDust(NPC.position, NPC.width, NPC.height, DustID.Blood);
+			}
+		}
         public override bool CanTownNPCSpawn(int numTownNPCs, int money) {
 			Player player = Main.LocalPlayer;
             if (player.inventory.Any(item => item.type == ModContent.ItemType<FoodCoupon>())){
@@ -80,21 +85,18 @@ namespace AtusMisc.NPCs {
             }
             return false;
 		}
-        public override string TownNPCName() {
-			switch (WorldGen.genRand.Next(4)) {
-				case 0:
-					return "Sayuri";
-
-				case 1:
-					return "Kotoha";
-
-				case 2:
-					return "Miharu";
-
-				default:
-					return "Anna";
-			}
+        public override ITownNPCProfile TownNPCProfile() {
+			return new SnackVendorProfile();
 		}
+        public override List<string> SetNPCNameList()
+        {
+            return new List<string>(){
+                "Kotoha",
+                "Sayuri",
+                "Miharu",
+                "Anna"
+            };
+        }
         public override string GetChat() {
 			WeightedRandom<string> chat = new WeightedRandom<string>();
             int guideGuy = NPC.FindFirstNPC(NPCID.Guide);
@@ -146,15 +148,15 @@ namespace AtusMisc.NPCs {
             nextSlot++;
             if (NPC.downedBoss1) {
             shop.item[nextSlot].SetDefaults(ItemID.BananaSplit);
-            shop.item[nextSlot].shopCustomPrice = 5;
+            shop.item[nextSlot].shopCustomPrice = 4;
             shop.item[nextSlot].shopSpecialCurrency = AtusMisc.Foodies;
             nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.CoffeeCup);
-            shop.item[nextSlot].shopCustomPrice = 5;
+            shop.item[nextSlot].shopCustomPrice = 4;
             shop.item[nextSlot].shopSpecialCurrency = AtusMisc.Foodies;
             nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.Fries);
-            shop.item[nextSlot].shopCustomPrice = 5;
+            shop.item[nextSlot].shopCustomPrice = 4;
             shop.item[nextSlot].shopSpecialCurrency = AtusMisc.Foodies;
             nextSlot++;
             shop.item[nextSlot].SetDefaults(ItemID.ChickenNugget);
@@ -263,5 +265,20 @@ namespace AtusMisc.NPCs {
             closeness = 5;
             item = ItemID.LaserMachinegun;
         }
+    }
+    public class SnackVendorProfile : ITownNPCProfile
+    {
+        public int RollVariation() => 0;
+        public string GetNameForVariant(NPC npc) => npc.getNewNPCName();
+        public Asset<Texture2D> GetTextureNPCShouldUse(NPC npc) {
+			if (npc.IsABestiaryIconDummy && !npc.ForcePartyHatOn)
+				return ModContent.Request<Texture2D>("AtusMisc/NPCs/SnackVendor");
+
+			if (npc.altTexture == 1)
+				return ModContent.Request<Texture2D>("AtusMisc/NPCs/SnackVendor");
+
+			return ModContent.Request<Texture2D>("AtusMisc/NPCs/SnackVendor");
+		}
+        public int GetHeadTextureIndex(NPC npc) => ModContent.GetModHeadSlot("AtusMisc/NPCs/SnackVendor_Head");
     }
 }
