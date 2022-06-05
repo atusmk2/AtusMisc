@@ -13,8 +13,8 @@ namespace AtusMisc.Items.Drop
 			ItemID.Sets.ItemNoGravity[Item.type] = false;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1000;
 
-        }
-       public override void SetDefaults() {
+		}
+	   public override void SetDefaults() {
 			Item.width = 18;
 			Item.height = 26;
 			Item.maxStack = 1000;
@@ -23,5 +23,5 @@ namespace AtusMisc.Items.Drop
 		public override void PostUpdate() {
 			Lighting.AddLight(Item.Center, Color.WhiteSmoke.ToVector3() * 0.7f * Main.essScale);
 		}
-    }
+	}
 }

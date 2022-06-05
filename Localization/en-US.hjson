@@ -1,20 +1,33 @@
 Mods: {
-    AtusMisc: {
-        Currencies: {
-            FoodMoney: Food Coupon
-        }
+	AtusMisc: {
+		Config: {
+			vanillaShop: Vanilla Shop Edit
+			shopToggle: {
+				Label: Enable Shop Edit
+				Tooltip: Enable or Disable addition to Vanilla Shops (WIP).
+			}
+			fishingRod: Vanilla Fishing Rod Edit
+			rodEdit: {
+				Label: Enable Rod Edit?
+				Tooltip: Enable or Disable changes to Vanilla Fishing Rods.
+			}
+		}
+		Currencies: {
+			FoodMoney: Food Coupon
+		}
 
 		ItemName: {
 			kajitsu: Fruit Drop
 			kusuri:	Potion Drop
 			randomVan: Random Vanilla Gacha
+			randomVanWeapon: Random Vanilla Weapon
 		}
 
-        NPCName: {
-            SnackVendor: Snack Vendor Lady
-        }
+		NPCName: {
+			SnackVendor: Snack Vendor Lady
+		}
 
-        TownNPCMood: {
+		TownNPCMood: {
 			SnackVendor: {
 				Content: I feel pretty fine right now.
 				NoHome: Hmm, all these monsters are annoying, I wish I had place to stay.
@@ -31,5 +44,5 @@ Mods: {
 				HateNPC: "I hate all the loud noises caused by {NPCName} and his explosives! I just want peace and quiet."
 			}
 		}
-    }
+	}
 }

@@ -17,13 +17,13 @@ namespace AtusMisc.Items.Drop
 		private static List<long> combatPot = new List<long> { ItemID.IronskinPotion, ItemID.ArcheryPotion, ModContent.ItemType<OnslaughtPotion>(), ItemID.RagePotion, ItemID.WrathPotion, ItemID.BattlePotion, ItemID.MagicPowerPotion, ItemID.SwiftnessPotion, ItemID.SummoningPotion, ItemID.TitanPotion, ItemID.AmmoReservationPotion, ItemID.EndurancePotion, ItemID.InfernoPotion, ItemID.LifeforcePotion };
 		private static List<short> exploPot = new List<short> { ItemID.NightOwlPotion, ItemID.ShinePotion, ItemID.MiningPotion, ItemID.GillsPotion, ItemID.WaterWalkingPotion, ItemID.FeatherfallPotion, ItemID.WarmthPotion, ItemID.ObsidianSkinPotion, ItemID.TrapsightPotion, ItemID.FlipperPotion, ItemID.GravitationPotion, ItemID.SpelunkerPotion, ItemID.PotionOfReturn, ItemID.RecallPotion };
 		private static List<short> luckPot =  new List<short> { ItemID.LuckPotionLesser, ItemID.LuckPotion, ItemID.LuckPotionGreater};
-        public override void SetStaticDefaults() {
+		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Throw into Extractinator to get potions.");
-            ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
+			ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 999;
 
-        }
-       public override void SetDefaults() {
+		}
+	   public override void SetDefaults() {
 			Item.width = 20;
 			Item.height = 26;
 			Item.maxStack = 999;
@@ -36,9 +36,9 @@ namespace AtusMisc.Items.Drop
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.consumable = true;
 		}
-    	// public override Color? GetAlpha(Color lightColor) {
-        //     return new Color(255,255,255,0);
-        // }
+		// public override Color? GetAlpha(Color lightColor) {
+		//     return new Color(255,255,255,0);
+		// }
 		public override void PostUpdate() {
 			Lighting.AddLight(Item.Center, Color.WhiteSmoke.ToVector3() * 0.7f * Main.essScale);
 		}
@@ -65,5 +65,5 @@ namespace AtusMisc.Items.Drop
 			resultStack = 1;
 			}
 		}
-    }
+	}
 }

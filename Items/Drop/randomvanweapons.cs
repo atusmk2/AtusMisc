@@ -8,11 +8,11 @@ using Terraria.GameContent.Creative;
 
 namespace AtusMisc.Items.Drop
 {
-	public class randomVan : ModItem
+	public class randomVanWeapon : ModItem
 	{
         public override string Texture => "AtusMisc/Items/Drop/GachaCrystal";
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("Throw into Extractinator to get random vanilla items.\n[c/FFD700:\"At least this doesn't cost irl money.\"]\n[c/FF0000:Disclaimer: May break your game when getting unobtainable item, use at your own risk!]");
+			Tooltip.SetDefault("Throw into Extractinator to get random vanilla weapons.\n[c/FFD700:\"At least this doesn't cost irl money.\"]");
             ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 999;
 
@@ -35,9 +35,25 @@ namespace AtusMisc.Items.Drop
 			Lighting.AddLight(Item.Center, Color.Gold.ToVector3() * 0.9f * Main.essScale);
 		}
 		public override void ExtractinatorUse(ref int resultType, ref int resultStack){
-			int amogus = Main.rand.Next(1, ItemLoader.ItemCount);
-			resultStack = 1;
-			resultType = amogus;
+			int amo = 0;
+			int qa = 0;
+			bool cu = false;
+			while (!cu) {
+				amo = Main.rand.Next(1, ItemLoader.ItemCount);
+				Item nu = new Item();
+				nu.SetDefaults(amo);
+                int qu = nu.rare;
+				if ((nu.CountsAsClass(DamageClass.Melee) || nu.CountsAsClass(DamageClass.Ranged) || nu.CountsAsClass(DamageClass.Magic) || nu.CountsAsClass(DamageClass.Summon)) && (qu <= 3 || Main.hardMode) && nu.maxStack == 1) {
+					cu = true;
+					qa = 1;
+				}
+				if ((nu.CountsAsClass(DamageClass.Melee) || nu.CountsAsClass(DamageClass.Ranged) || nu.CountsAsClass(DamageClass.Magic) || nu.CountsAsClass(DamageClass.Summon)) && (qu <= 3 || Main.hardMode) && nu.maxStack > 1) {
+					cu = true;
+					qa = Main.rand.Next(5,10);
+				}
+			}
+			resultStack = qa;
+			resultType = amo;
 		}
     }
 }

@@ -13,11 +13,11 @@ namespace AtusMisc.Items.Drop
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Throw into Extractinator to get fruits.");
-            ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
+			ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 999;
 
-        }
-       public override void SetDefaults() {
+		}
+	   public override void SetDefaults() {
 			Item.width = 24;
 			Item.height = 26;
 			Item.maxStack = 999;
@@ -38,8 +38,8 @@ namespace AtusMisc.Items.Drop
 			resultType = (int)fruitsDrop[Main.rand.Next(fruitsDrop.Count)];
 			resultStack = 1;
 		}
-        // public override Color? GetAlpha(Color lightColor) {
-        //     return new Color(255,255,255,0);
-        // }
-    }
+		// public override Color? GetAlpha(Color lightColor) {
+		//     return new Color(255,255,255,0);
+		// }
+	}
 }
