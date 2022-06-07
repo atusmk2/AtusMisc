@@ -12,7 +12,7 @@ namespace AtusMisc.NPCs {
 			return ModContent.GetInstance<ModOptions>().fishingTroll;
 		}
 		public override void CatchFish(FishingAttempt attempt, ref int itemDrop, ref int npcSpawn, ref AdvancedPopupRequest sonar, ref Vector2 sonarPosition) {
-			bool unlucky = Main.rand.NextBool(1,5);
+			bool unlucky = Main.rand.NextBool(1,3);
 			bool spawn = false;
 			int troll = 0;
 			while (!spawn) {

@@ -9,7 +9,7 @@ Mods: {
 			fishingTroll: '"We Do A Litte Bit Trolling"- fishing edition!'
 			enableTroll: {
 				Label: Enable?
-				Tooltip: This option gives you a 20% to caught random enemies instead of normal fishing yield.
+				Tooltip: This option gives you a 33% chances to catch random enemies/critters instead of normal fishing yield.
 			}
 		}
 		Currencies: {
