@@ -6,10 +6,10 @@ Mods: {
 				Label: Enable Shop Edit
 				Tooltip: Enable or Disable addition to Vanilla Shops (WIP).
 			}
-			fishingRod: Vanilla Fishing Rod Edit
-			rodEdit: {
-				Label: Enable Rod Edit?
-				Tooltip: Enable or Disable changes to Vanilla Fishing Rods.
+			fishingTroll: '"We Do A Litte Bit Trolling"- fishing edition!'
+			enableTroll: {
+				Label: Enable?
+				Tooltip: This option gives you a 20% to caught random enemies instead of normal fishing yield.
 			}
 		}
 		Currencies: {
@@ -17,10 +17,10 @@ Mods: {
 		}
 
 		ItemName: {
-			kajitsu: Fruit Drop
-			kusuri:	Potion Drop
-			randomVan: Random Vanilla Gacha
-			randomVanWeapon: Random Vanilla Weapon
+			Kajitsu: Fruit Drop
+			Kusuri:	Potion Drop
+			RandomVan: Random Vanilla Gacha
+			RandomVanWeapon: Random Vanilla Weapon
 		}
 
 		NPCName: {

@@ -1,3 +1,4 @@
 ﻿*.zip
+*.bak
 obj/
 bin/

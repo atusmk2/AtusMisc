@@ -10,7 +10,7 @@ using AtusMisc.Common.Config;
 namespace AtusMisc {
 	public class vanillaShopEdit : GlobalNPC {
 		public override bool IsLoadingEnabled(Mod mod) {
-			return ModContent.GetInstance<toggleOptions>().shopToggle;
+			return ModContent.GetInstance<ModOptions>().shopToggle;
 		}
 		public override void SetupShop(int type, Chest shop, ref int nextSlot) {
 			if ( type == NPCID.Merchant ) {
@@ -38,10 +38,10 @@ namespace AtusMisc {
 				}
 			}
 		}
-		public override void SetupTravelShop(int[] shop, ref int nextSlot)
-		{
-			base.SetupTravelShop(shop, ref nextSlot);
-			shop[nextSlot++] = ModContent.ItemType<randomVan>();
-		}
+		// public override void SetupTravelShop(int[] shop, ref int nextSlot)
+		// {
+		// 	base.SetupTravelShop(shop, ref nextSlot);
+		// 	shop[nextSlot++] = ModContent.ItemType<randomVan>();
+		// }
 	}
 }

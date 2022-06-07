@@ -3,11 +3,11 @@ using Terraria.ModLoader;
 
 namespace AtusMisc.Buffs
 {
-	public class LureMaster : ModBuff
+	public class RodMaster : ModBuff
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Lure Master");
-			Description.SetDefault("Chances to get more fishes!\nAlso increase your fishing power by 10.");
+			DisplayName.SetDefault("Rod Master");
+			Description.SetDefault("More bobbers!\nAlso increase your fishing power by 10.");
 			Main.buffNoTimeDisplay[Type] = false;
 			Main.debuff[Type] = false;
 		}

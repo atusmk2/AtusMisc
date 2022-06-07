@@ -1,16 +1,14 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using System.Collections.Generic;
-using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.GameContent.Creative;
 using AtusMisc.Consumables.Potions;
 
 namespace AtusMisc.Items.Drop
 {
-	public class kusuri : ModItem
+	public class Kusuri : ModItem
 	{
 		private static List<short> commonPotLesser = new List<short> { ItemID.LesserHealingPotion, ItemID.LesserManaPotion, ItemID.LesserRestorationPotion };
 		private static List<short> commonPotNormal = new List<short> { ItemID.HealingPotion, ItemID.ManaPotion, ItemID.RegenerationPotion };

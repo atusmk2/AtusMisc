@@ -9,7 +9,7 @@ using Terraria.Localization;
 
 namespace AtusMisc.Items.Drop
 {
-	public class kajitsu : ModItem
+	public class Kajitsu : ModItem
 	{
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Throw into Extractinator to get fruits.");

@@ -5,10 +5,10 @@ using Terraria.ModLoader;
 using AtusMisc.Buffs;
 
 namespace AtusMisc.Consumables.Potions {
-	public class LureMasterPotion : ModItem {
+	public class RodMasterPotion : ModItem {
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("Lure Master Potion");
-			Tooltip.SetDefault("Increase your fishing yield and skill.");
+			DisplayName.SetDefault("Rod Master Potion");
+			Tooltip.SetDefault("Increase your fishing bobber and skill.");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 20;
 		}
 		public override void SetDefaults() {
@@ -24,7 +24,7 @@ namespace AtusMisc.Consumables.Potions {
 			Item.rare = 2;
 			Item.value = Item.buyPrice(gold: 1);
 			Item.sellPrice(silver: 20);
-			Item.buffType = ModContent.BuffType<LureMaster>();
+			Item.buffType = ModContent.BuffType<RodMaster>();
 			Item.buffTime = 28800;
 		}
 		public override void AddRecipes() {

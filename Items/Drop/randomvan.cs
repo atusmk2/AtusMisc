@@ -8,9 +8,9 @@ using Terraria.GameContent.Creative;
 
 namespace AtusMisc.Items.Drop
 {
-	public class randomVan : ModItem
+	public class RandomVan : ModItem
 	{
-        public override string Texture => "AtusMisc/Items/Drop/GachaCrystal";
+        public override string Texture => "AtusMisc/Items/Drop/GachaCrate";
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Throw into Extractinator to get random vanilla items.\n[c/FFD700:\"At least this doesn't cost irl money.\"]\n[c/FF0000:Disclaimer: May break your game when getting unobtainable item, use at your own risk!]");
             ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
@@ -18,8 +18,8 @@ namespace AtusMisc.Items.Drop
 
         }
        public override void SetDefaults() {
-			Item.width = 26;
-			Item.height = 28;
+			Item.width = 34;
+			Item.height = 34;
 			Item.maxStack = 999;
 			Item.rare = ItemRarityID.Quest;
 			Item.value = Item.buyPrice(gold: 25);
