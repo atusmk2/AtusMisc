@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
@@ -17,9 +18,9 @@ namespace AtusMisc.NPCs {
 			int troll = 0;
 			while (!spawn) {
 				troll = Main.rand.Next(NPCLoader.NPCCount);
-				NPC slap = new NPC();
-				slap.SetDefaults(troll);
-				if (!slap.townNPC && !slap.boss) {
+				NPC candidate = new NPC();
+				candidate.SetDefaults(troll);
+				if (!candidate.townNPC && !candidate.boss && !NPCID.Sets.IsTownPet[candidate.type] && !NPCID.Sets.ProjectileNPC[candidate.type] && !NPCID.Sets.ShouldBeCountedAsBoss[candidate.type]) {
 					spawn = true;
 				}
 			}
