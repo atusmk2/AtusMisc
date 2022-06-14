@@ -22,7 +22,6 @@ namespace AtusMisc.Items.Drop
 			Item.height = 34;
 			Item.maxStack = 999;
 			Item.rare = ItemRarityID.Quest;
-			Item.value = Item.buyPrice(gold: 25);
             Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.useAnimation = 15;

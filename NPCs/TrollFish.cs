@@ -20,7 +20,7 @@ namespace AtusMisc.NPCs {
 				troll = Main.rand.Next(NPCLoader.NPCCount);
 				NPC candidate = new NPC();
 				candidate.SetDefaults(troll);
-				if (!candidate.townNPC && !candidate.boss && !NPCID.Sets.IsTownPet[candidate.type] && !NPCID.Sets.ProjectileNPC[candidate.type] && !NPCID.Sets.ShouldBeCountedAsBoss[candidate.type]) {
+				if (!candidate.townNPC && !candidate.boss && !NPCID.Sets.IsTownPet[candidate.type] && !NPCID.Sets.ProjectileNPC[candidate.type] && !NPCID.Sets.ShouldBeCountedAsBoss[candidate.type] && (candidate.lifeMax < 400 || Main.hardMode)) {
 					spawn = true;
 				}
 			}
