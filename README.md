@@ -1,7 +1,7 @@
-# Atus' Misc
-Silly Mod for Terraria 1.4
+# Atus' Miscellaneous Additions
+Silly Mod for Terraria 1.4, for learning purpose and w/e.
 
-Mainly to be used along with [Terraria Overhaul](https://github.com/Mirsario/TerrariaOverhaul/).
+Not tested in multiplayer, use at your own discretion.
 
 What's changed so far:
 =========================================================================================
