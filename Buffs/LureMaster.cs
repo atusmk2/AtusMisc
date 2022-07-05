@@ -7,7 +7,7 @@ namespace AtusMisc.Buffs
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Lure Master");
-			Description.SetDefault("Chances to get more fishes!\nAlso increase your fishing power by 10.");
+			Description.SetDefault("Chances to catch more fish!\nAlso increase your fishing power by 10.");
 			Main.buffNoTimeDisplay[Type] = false;
 			Main.debuff[Type] = false;
 		}

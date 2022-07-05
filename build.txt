@@ -1,4 +1,4 @@
-displayName = Atus' Miscellaneous Additions
+displayName = Some Miscellaneous Additions
 author = atus
 version = 0.1
 side = Client

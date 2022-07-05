@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using AtusMisc.Buffs;
 
 namespace AtusMisc.Consumables.Potions {
-	public class OnslaughtPotion : ModItem {
+	public class DangerzonePotion : ModItem {
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("I hope you can survive this...");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 20;
@@ -21,14 +21,11 @@ namespace AtusMisc.Consumables.Potions {
 			Item.maxStack = 30;
 			Item.consumable = true;
 			Item.rare = 2;
-			Item.value = Item.buyPrice(gold: 1);
-			Item.sellPrice(silver: 20);
-			Item.buffType = ModContent.BuffType<TheHorde>(); // Specify an existing buff to be applied when used.
-			Item.buffTime = 120; // The amount of time the buff declared in Item.buffType will last in ticks. 5400 / 60 is 90, so this buff will last 90 seconds.
+			Item.value = Item.buyPrice(silver: 20);
+			Item.buffType = ModContent.BuffType<TheHorde>();
+			Item.buffTime = 300;
 		}
-		/* public override void OnConsumeItem(Player Player) {
-			Player.AddBuff(ModContent.BuffType<NegativeEffect1>(), 3600);
-		} */
+		
 		public override void AddRecipes() {
 			CreateRecipe()
 				.AddIngredient(ItemID.BattlePotion, 1)

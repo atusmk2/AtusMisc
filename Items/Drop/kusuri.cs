@@ -12,7 +12,7 @@ namespace AtusMisc.Items.Drop
 	{
 		private static List<short> commonPotLesser = new List<short> { ItemID.LesserHealingPotion, ItemID.LesserManaPotion, ItemID.LesserRestorationPotion };
 		private static List<short> commonPotNormal = new List<short> { ItemID.HealingPotion, ItemID.ManaPotion, ItemID.RegenerationPotion };
-		private static List<long> combatPot = new List<long> { ItemID.IronskinPotion, ItemID.ArcheryPotion, ModContent.ItemType<OnslaughtPotion>(), ItemID.RagePotion, ItemID.WrathPotion, ItemID.BattlePotion, ItemID.MagicPowerPotion, ItemID.SwiftnessPotion, ItemID.SummoningPotion, ItemID.TitanPotion, ItemID.AmmoReservationPotion, ItemID.EndurancePotion, ItemID.InfernoPotion, ItemID.LifeforcePotion };
+		private static List<long> combatPot = new List<long> { ItemID.IronskinPotion, ItemID.ArcheryPotion, ModContent.ItemType<DangerzonePotion>(), ItemID.RagePotion, ItemID.WrathPotion, ItemID.BattlePotion, ItemID.MagicPowerPotion, ItemID.SwiftnessPotion, ItemID.SummoningPotion, ItemID.TitanPotion, ItemID.AmmoReservationPotion, ItemID.EndurancePotion, ItemID.InfernoPotion, ItemID.LifeforcePotion };
 		private static List<short> exploPot = new List<short> { ItemID.NightOwlPotion, ItemID.ShinePotion, ItemID.MiningPotion, ItemID.GillsPotion, ItemID.WaterWalkingPotion, ItemID.FeatherfallPotion, ItemID.WarmthPotion, ItemID.ObsidianSkinPotion, ItemID.TrapsightPotion, ItemID.FlipperPotion, ItemID.GravitationPotion, ItemID.SpelunkerPotion, ItemID.PotionOfReturn, ItemID.RecallPotion };
 		private static List<short> luckPot =  new List<short> { ItemID.LuckPotionLesser, ItemID.LuckPotion, ItemID.LuckPotionGreater};
 		public override void SetStaticDefaults() {
