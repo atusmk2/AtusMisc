@@ -5,7 +5,8 @@ namespace AtusMisc.Common.Config
 {
 	public class ModOptions : ModConfig
 	{
-		public override ConfigScope Mode => ConfigScope.ClientSide;
+		public override ConfigScope Mode => ConfigScope.ServerSide;
+		
 		[Header("$Mods.AtusMisc.Config.vanillaShop")] // Test
 		[Label("$Mods.AtusMisc.Config.shopToggle.Label")] // Label
 		[Tooltip("$Mods.AtusMisc.Config.shopToggle.Tooltip")] // Tooltip

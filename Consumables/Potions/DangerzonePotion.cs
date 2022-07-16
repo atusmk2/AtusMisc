@@ -13,7 +13,7 @@ namespace AtusMisc.Consumables.Potions {
 		public override void SetDefaults() {
 			Item.width = 20;
 			Item.height = 26;
-			Item.useStyle = ItemUseStyleID.EatFood;
+			Item.useStyle = ItemUseStyleID.DrinkLiquid;
 			Item.useAnimation = 15;
 			Item.useTime = 15;
 			Item.useTurn = true;
