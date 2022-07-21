@@ -9,7 +9,7 @@ Mods: {
 			fishingTroll: '"We Do A Litte Bit Trolling"- fishing edition!'
 			enableTroll: {
 				Label: Enable?
-				Tooltip: This option gives you a 33% chances to catch random enemies/critters instead of normal fishing yield.
+				Tooltip: This option gives you a 20% chances to catch random enemies/critters instead of normal fishing yield.
 			}
 		}
 		Currencies: {
@@ -40,7 +40,7 @@ Mods: {
 				HateBiome: "Its kind of hard to do commerce while being attacked by monsters in {BiomeName}."
 				LikeNPC: "I can respect {NPCName} as a colleague and educator!"
 				LoveNPC: "Do you think {NPCName} notices me, isn't he?"
-				DislikeNPC: '''"{NPCName} keeps rambling on about "payed mods"... Wish I could convince him how terrible of an idea that is."'''
+				DislikeNPC: '''"{NPCName} keeps rambling on about "paid mods"... Wish I could convince him how terrible of an idea that is."'''
 				HateNPC: "I hate all the loud noises caused by {NPCName} and his explosives! I just want peace and quiet."
 			}
 		}
