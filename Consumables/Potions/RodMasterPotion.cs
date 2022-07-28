@@ -30,8 +30,8 @@ namespace AtusMisc.Consumables.Potions {
 		public override void AddRecipes() {
 			CreateRecipe()
 				.AddIngredient(ItemID.FishingPotion)
-				.AddIngredient(ItemID.FallenStar, 3)
-				.AddIngredient(ItemID.JourneymanBait)
+				.AddIngredient(ItemID.FallenStar, 6)
+				.AddIngredient(ItemID.MasterBait)
 				.AddTile(TileID.Bottles)
 				.Register();
 		}

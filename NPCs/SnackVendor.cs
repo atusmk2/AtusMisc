@@ -199,6 +199,10 @@ namespace AtusMisc.NPCs {
 			nextSlot++;
 			}
 			if (NPC.downedBoss3) {
+			shop.item[nextSlot].SetDefaults(ItemID.Spaghetti);
+			shop.item[nextSlot].shopCustomPrice = 6;
+			shop.item[nextSlot].shopSpecialCurrency = AtusMisc.Foodies;
+			nextSlot++;
 			shop.item[nextSlot].SetDefaults(ItemID.Burger);
 			shop.item[nextSlot].shopCustomPrice = 6;
 			shop.item[nextSlot].shopSpecialCurrency = AtusMisc.Foodies;

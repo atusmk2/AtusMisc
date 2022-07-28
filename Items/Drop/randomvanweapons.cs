@@ -10,19 +10,19 @@ namespace AtusMisc.Items.Drop
 {
 	public class RandomVanWeapon : ModItem
 	{
-        public override string Texture => "AtusMisc/Items/Drop/WeaponCrate";
+		public override string Texture => "AtusMisc/Items/Drop/WeaponCrate";
 		public override void SetStaticDefaults() {
 			Tooltip.SetDefault("Throw into Extractinator to get random vanilla weapons.\n[c/FFD700:\"At least this doesn't cost irl money.\"]");
-            ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
+			ItemID.Sets.ExtractinatorMode[Item.type] = Item.type;
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 999;
 
-        }
-       public override void SetDefaults() {
+		}
+	   public override void SetDefaults() {
 			Item.width = 34;
 			Item.height = 34;
 			Item.maxStack = 999;
 			Item.rare = ItemRarityID.Quest;
-            Item.useTurn = true;
+			Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.useAnimation = 15;
 			Item.useTime = 15;
@@ -41,7 +41,7 @@ namespace AtusMisc.Items.Drop
 				amo = Main.rand.Next(1, ItemLoader.ItemCount);
 				Item nu = new Item();
 				nu.SetDefaults(amo);
-                int qu = nu.rare;
+				int qu = nu.rare;
 				if ((nu.CountsAsClass(DamageClass.Melee) || nu.CountsAsClass(DamageClass.Ranged) || nu.CountsAsClass(DamageClass.Magic) || nu.CountsAsClass(DamageClass.Summon)) && (qu <= 3 || Main.hardMode) && nu.maxStack == 1) {
 					cu = true;
 					qa = 1;
@@ -54,5 +54,5 @@ namespace AtusMisc.Items.Drop
 			resultStack = qa;
 			resultType = amo;
 		}
-    }
+	}
 }

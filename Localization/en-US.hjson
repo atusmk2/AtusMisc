@@ -19,8 +19,8 @@ Mods: {
 		ItemName: {
 			Kajitsu: Fruit Drop
 			Kusuri:	Potion Drop
-			RandomVan: Random Vanilla Gacha
-			RandomVanWeapon: Random Vanilla Weapon
+			RandomVan: Random Item Gacha
+			RandomVanWeapon: Random Weapon Gacha
 		}
 
 		NPCName: {
